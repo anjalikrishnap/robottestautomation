@@ -15,12 +15,14 @@ ${filepath}    C:\\Users\\krish\\PycharmProjects\\robottestautomation\\DATAS\\cs
 
 *** Test Cases ***
 amazon login with csv
+    [Tags]  Regression
     @{csvdata}=    amazon_datareader.Get csv data for login    ${filepath}
     FOR    ${val}    IN    @{csvdata}
         log to console    ${val}
         amzon login csv    @{val}
     END
 amzon login scenarios
+    [Tags]    Smoke login
     [Template]    amzon login
     &{credential}
     &{credential1}
