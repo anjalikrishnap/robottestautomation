@@ -9,3 +9,7 @@ Get csv data for login
     [Arguments]    ${filepath}
     ${data} =    csv input process   ${filepath}
     [Return]    ${data}
+Get csv data for product add to cart
+    [Arguments]    ${filepath}
+    ${data} =    csv input process   ${filepath}
+    [Return]    ${data}

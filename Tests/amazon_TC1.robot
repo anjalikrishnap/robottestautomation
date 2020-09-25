@@ -8,44 +8,30 @@ Test Teardown  common.exit browser
 Resource    ../Resources/amazon_datareader.robot
 
 *** Variables ***
-&{proddata}     searchitem=iphone   expected_searchitem=iphone
-&{credential}   email=Anjalitheertha@gmail.com  password=Anjali@1
-&{credential1}   email=Anjalia@gmail.com  password=Anjali@1
+&{proddata}     searchitem=iphone   expected=iphone
+&{credential}   email=anjali_am@outlook.com  password=testpassword
+&{credential1}    email=anjali_am@outlook.com  password=testpassword
 ${filepath}    C:\\Users\\krish\\PycharmProjects\\robottestautomation\\DATAS\\csvdata.csv
-
+${filepathprod}  C:\\Users\\krish\\PycharmProjects\\robottestautomation\\DATAS\\product.csv
 *** Test Cases ***
-amazon login with csv
-    [Tags]  Regression
-    @{csvdata}=    amazon_datareader.Get csv data for login    ${filepath}
-    FOR    ${val}    IN    @{csvdata}
-        log to console    ${val}
-        amzon login csv    @{val}
-    END
-amzon login scenarios
-    [Tags]    Smoke login
-    [Template]    amzon login
-    &{credential}
-    &{credential1}
-amzon product search
-    amazon search   &{proddata}
-amazon logintest "Cart"
+
+amazon cart operation
     [Tags]    Smoke
     #TODO - complete this
     set log level  debug
-    ${s}=    get selection from user    who areyou?    anjali    krish
+    @{prodlist}=    get selections from user    which product to add?    amazon echo    lenovotabm10
+    @{proddic}=  Get csv data for product add to cart   ${filepathprod}
+    FOR     ${prod}     IN  @{prodlist}
+        Handle inner loop    ${prod}    @{proddic}
+    END
 
-    amazon.amazon search
-    ${ss} =    set variable    ${s}
-    @{ll}=     set variable    ffdf    hf    hh
-    set global variable    @{ll}
-    comment    @{ll}
-    create directory    sample
-    #copy directory    sample     c:/
-    create file    sample/samplefile
-    should exist    sample
-
-
-
+#run keyword if    '${prod}'=='${proddic}[0][0]'   amazon.amazon add to cart    ${proddic}[0][0]    ${proddic}[0][1]
+*** Keywords ***
+Handle inner loop
+    [Arguments]    ${prod}    @{proddic}
+    FOR    ${i}    IN    @{proddic}
+            run keyword if    '${prod}'=='${i}[0]'   amazon.amazon add to cart    ${i}[0]    ${i}[1]
+    END
 
 
 

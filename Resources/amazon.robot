@@ -7,10 +7,10 @@ Resource   ../Resources/PO/amazon_login.robot
 
 *** Keywords ***
 amazon search
-    [Arguments]    ${searchitem}    ${expected_searchitem}
+    [Arguments]    ${searchitem}    ${expected}
     amazon_nav.navigate to amazon home page
     homepage.search item    ${searchitem}
-    page should contain     ${expected_searchitem}
+    page should contain     ${expected}
 amzon login
     [Arguments]  ${email}   ${password}
     amazon_nav.navigate to amazon login page
@@ -25,7 +25,15 @@ amzon login csv
     Run Keyword And Ignore Error    amazon_login.fill password    ${val}[1]
     Run Keyword And Ignore Error    amazon_login.continue with password
     page should contain    ${val}[2]
+amazon product count
+    [Arguments]    ${searchitem}    ${xpathsearch}    ${count}
+    amazon_nav.navigate to amazon home page
+    homepage.search item    ${searchitem}
+    locator should match x times    ${xpathsearch}  ${Count}
 
-
+amazon add to cart
+    [Arguments]    ${item}    ${locator}
+    amazon_nav.navigate to amazon home page
+    homepage.search and select item    ${item}    ${locator}
 
 
