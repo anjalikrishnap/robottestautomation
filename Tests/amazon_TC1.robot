@@ -15,7 +15,7 @@ ${filepath}    C:\\Users\\krish\\PycharmProjects\\robottestautomation\\DATAS\\cs
 ${filepathprod}  C:\\Users\\krish\\PycharmProjects\\robottestautomation\\DATAS\\product.csv
 *** Test Cases ***
 amazon login invalid scenarios
-    [Tags]  Negative
+    [Tags]  Negative test
     [Documentation]    to test  invalid login scenarios
     @{csvdata}=    amazon_datareader.Get csv data for login    ${filepath}
     FOR    ${val}    IN    @{csvdata}
@@ -39,9 +39,9 @@ amzon valid product search
     amazon search   &{proddata}
 amazon test count of displayed product
     [Documentation]    to check whether the total number of item displayed on page is equal to the mentioned number
-    amazon.amazon product count     oneplus    xpath://img[@data-image-latency='s-product-image']  20
+    amazon.amazon product count     oneplus    xpath://img[@data-image-latency='s-product-image']  18
 amazon cart operation
-    [Tags]    Smoke
+    [Tags]    Regression
     [Documentation]    to test  adding  multiple product to cart
     #TODO - complete this by adding verification in cart page
     set log level  debug
