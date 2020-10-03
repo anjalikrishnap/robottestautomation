@@ -38,11 +38,11 @@ The following are the page object files which has been utilized  by each test ca
     A resource file with reusable keywords for data driven tests.
 
 <h3>Execution:</h3>
-A precondition for running the tests is having Robot Framework and SeleniumLibrary installed, and they in turn require Python. 
-Tests (or tasks) are executed from the command line using the robot command and the results has been redirected to results directory.
-robot –d results Tests
-Run robot --help  for more information about the command line usage. For a complete reference manual see Robot Framework User Guide.
+<p>A precondition for running the tests is having Robot Framework and SeleniumLibrary installed, and they in turn require Python.</p>
+<p>Tests (or tasks) are executed from the command line using the robot command and the results has been redirected to results directory.<p>
+<div>robot –d results Tests</div>
+<p>Run robot --help  for more information about the command line usage. For a complete reference manual see Robot Framework User Guide.</p>
 
-After running tests you will get report and log in HTML format and also will get screen shots for failed tests. Can also generate the debug logs:
+<p>After running tests you will get report and log in HTML format and also will get screen shots for failed tests. Can also generate the debug logs</p>
 
 
