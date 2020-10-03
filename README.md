@@ -1,10 +1,10 @@
 # robottestautomation
 Sample Amazon web test using Robot Framework and SeleniumLibrary
-<h1>A practice automation test framework for Amazon.com</h1>
+<h1 style="background-color:DodgerBlue;">A practice automation test framework for Amazon.com</h1>
 <p>Robot Framework is a generic open source automation framework for acceptance testing and acceptance test-driven development. This project introduces the basic Robot Framework with Selenium Library for testing some of the scenarios of the public site Amazon,To get an understanding of how robot tests can be written executed and how the logs looks like. </p>
-<h2>Contents:</h2>
+<h2 style="background-color:DodgerBlue;">Contents:</h2>
 Test case files are located in Tests directory and the resource files used by them are located in the Resource directory. Necessary input data has been updated in DATAS and custom python libraries are inside Customlib directory.
-<h3>Tests:</h3>
+<h3 style="background-color:DodgerBlue;">Tests:</h3>
 <ul>
   <li>TC_amazon_1_Login.robot</li>
        A test suite with tests for valid login and also covers invalid login scenarios. This test has a work flow that is created using keywords in page object located       in Resource directory. The invalid tests are data driven which takes input from external csv file and covers different invalid login scenario and validate the error messages passed from input file. Data has been read using python custom library which is located in CustomLib directory.
@@ -19,7 +19,7 @@ Test case files are located in Tests directory and the resource files used by th
 <li>gherkin_login.robot</li>
      A test suite with a single Gherkin style test.
 </ul>
-<h3>Resource</h3>
+<h3 style="background-color:DodgerBlue;">Resource</h3>
 The following are the page object files which has been utilized  by each test cases. And they utilize keywords from   SeleniumLibrary.
 1.	address.robot 
 2.	amazon_login.robot 
