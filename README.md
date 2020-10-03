@@ -22,19 +22,19 @@ Test case files are located in Tests directory and the resource files used by th
 <h3 style="background-color:DodgerBlue;">Resource</h3>
 The following are the page object files which has been utilized  by each test cases. And they utilize keywords from   SeleniumLibrary.
 <ol>
-  <li>1.	address.robot</li> 
-  <li>2.	amazon_login.robot</li>
-  <li>3.	amazon_nav.robot</li>
-  <li>4.	cart.robot</li>
-  <li>5.	checkout.robot</li>
-  <li>6.	homepage.robot</li>
-  <li>7.	useraccount.robot</li>
+  <li>address.robot</li> 
+  <li>amazon_login.robot</li>
+  <li>amazon_nav.robot</li>
+  <li>cart.robot</li>
+  <li>checkout.robot</li>
+  <li>homepage.robot</li>
+  <li>useraccount.robot</li>
 </ol>
-<ol>amazon.robot</ol>
+<ul>amazon.robot</ul>
     A resource file with reusable keywords and variables which they utilize keywords from all the resource located in Resource\PO
-<ol>common.robot</ol>
+<ul>common.robot</ul>
     A resource file with reusable keywords and variables which is common for all tests 
-<ol>amazon_datareader.robot</ol>
+<ul>amazon_datareader.robot</ul>
     A resource file with reusable keywords for data driven tests.
 
 <h3>Execution:</h3>
