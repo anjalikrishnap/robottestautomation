@@ -1,15 +1,17 @@
 *** Settings ***
 Documentation    reading all the data required for amazon application
 Library    ../Customlib/csvinput.py
+Library    ../Customlib/excelreader.py
 *** Variables ***
 
 
 *** Keywords ***
-Get csv data for login
+Get csv data
     [Arguments]    ${filepath}
     ${data} =    csv input process   ${filepath}
     [Return]    ${data}
-Get csv data for product add to cart
-    [Arguments]    ${filepath}
-    ${data} =    csv input process   ${filepath}
+
+Get excel data
+    [Arguments]    ${filepath}    ${minrow}    ${maxrow}    ${mincol}    ${maxcol}
+    ${data}=    excel input process  ${filepath}    ${minrow}    ${maxrow}    ${mincol}    ${maxcol}
     [Return]    ${data}
