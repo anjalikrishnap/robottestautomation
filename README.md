@@ -1,6 +1,6 @@
-# robottestautomation
-Sample Amazon web test using Robot Framework and SeleniumLibrary
-<h1 style="background-color:DodgerBlue;">A practice automation test framework for Amazon.com</h1>
+
+<h1 style="background-color:DodgerBlue;">Sample Amazon web test using Robot Framework and SeleniumLibrary</h1>
+A practice automation test framework for Amazon.com
 <p>Robot Framework is a generic open source automation framework for acceptance testing and acceptance test-driven development. This project introduces the basic Robot Framework with Selenium Library for testing some of the scenarios of the public site Amazon,To get an understanding of how robot tests can be written executed and how the logs looks like. </p>
 <h2 style="background-color:DodgerBlue;">Contents:</h2>
 Test case files are located in Tests directory and the resource files used by them are located in the Resource directory. Necessary input data has been updated in DATAS and custom python libraries are inside Customlib directory.
@@ -21,21 +21,23 @@ Test case files are located in Tests directory and the resource files used by th
 </ul>
 <h3 style="background-color:DodgerBlue;">Resource</h3>
 The following are the page object files which has been utilized  by each test cases. And they utilize keywords from   SeleniumLibrary.
-1.	address.robot 
-2.	amazon_login.robot 
-3.	amazon_nav.robot 
-4.	cart.robot 
-5.	checkout.robot 
-6.	homepage.robot 
-7.	useraccount.robot 
-amazon.robot
-A resource file with reusable keywords and variables which they utilize keywords from all the resource located in Resource\PO
-common.robot
-A resource file with reusable keywords and variables which is common for all tests 
-amazon_datareader.robot
-A resource file with reusable keywords for data driven tests.
+<ol>
+  <li>1.	address.robot</li> 
+  <li>2.	amazon_login.robot</li>
+  <li>3.	amazon_nav.robot</li>
+  <li>4.	cart.robot</li>
+  <li>5.	checkout.robot</li>
+  <li>6.	homepage.robot</li>
+  <li>7.	useraccount.robot</li>
+</ol>
+<ol>amazon.robot</ol>
+    A resource file with reusable keywords and variables which they utilize keywords from all the resource located in Resource\PO
+<ol>common.robot</ol>
+    A resource file with reusable keywords and variables which is common for all tests 
+<ol>amazon_datareader.robot</ol>
+    A resource file with reusable keywords for data driven tests.
 
-Execution:
+<h3>Execution:</h3>
 A precondition for running the tests is having Robot Framework and SeleniumLibrary installed, and they in turn require Python. 
 Tests (or tasks) are executed from the command line using the robot command and the results has been redirected to results directory.
 robot –d results Tests
