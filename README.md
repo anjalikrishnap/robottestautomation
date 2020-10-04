@@ -36,6 +36,8 @@ The following are the page object files which has been utilized  by each test ca
     A resource file with reusable keywords and variables which is common for all tests 
 <ul>amazon_datareader.robot</ul>
     A resource file with reusable keywords for data driven tests.
+<h3>AmazonDB.robot</h3>
+    A test suite for validating data from oracle db.
 
 <h3>Execution:</h3>
 <p>A precondition for running the tests is having Robot Framework and SeleniumLibrary installed, and they in turn require Python.</p>
